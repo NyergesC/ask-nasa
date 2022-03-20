@@ -4,6 +4,8 @@ const loadEvent = async _ => {
     
     const currentD = new Date().toISOString().split("T")[0]
 
+    console.log(currentD)
+
     rootElement.insertAdjacentHTML("beforeend", `
     <input class="test "type="date" id="date" value="${currentD}"> `)
     
