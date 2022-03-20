@@ -30,10 +30,6 @@ const loadEvent = async _ => {
         const title = apodJson.title
         const image = apodJson.url
         const explanation = apodJson.explanation
-
-        
-        console.log(title)        
-        console.log(explanation)        
         
         const todayPost = (title, image, explanation) => {
             return `
@@ -52,10 +48,8 @@ const loadEvent = async _ => {
             if(macskaElement != null){
                 macskaElement.remove()
             }            
-            rootElement.insertAdjacentHTML("beforeend", todayPost(title, image, explanation))               
+            rootElement.insertAdjacentHTML("beforeend", todayPost(title, image, explanation))           
 
-    }
-
-    
+    }    
 }
 window.addEventListener("load", loadEvent);
